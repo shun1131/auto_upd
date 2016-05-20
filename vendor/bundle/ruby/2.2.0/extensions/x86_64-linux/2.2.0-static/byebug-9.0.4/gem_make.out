@@ -1,0 +1,17 @@
+/usr/local/rbenv/versions/2.2.3/bin/ruby -r ./siteconf20160520-21259-jrr96t.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+compiling threads.c
+linking shared-object byebug/byebug.so
+
+make "DESTDIR=" install
+make: Warning: File `byebug.so' has modification time 0.087 s in the future
+/bin/install -c -m 0755 byebug.so ./.gem.20160520-21259-1sja3vj/byebug
+make: 警告:  時刻のずれを検出. 不完全なビルド結果になるかもしれません.

@@ -1,0 +1,15 @@
+/usr/local/rbenv/versions/2.2.3/bin/ruby -r ./siteconf20160520-21259-mf4ktp.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+make: Warning: File `Makefile' has modification time 0.24 s in the future
+make: 警告:  時刻のずれを検出. 不完全なビルド結果になるかもしれません.
+
+make "DESTDIR="
+make: Warning: File `Makefile' has modification time 0.16 s in the future
+compiling debug_inspector.c
+linking shared-object debug_inspector.so
+make: 警告:  時刻のずれを検出. 不完全なビルド結果になるかもしれません.
+
+make "DESTDIR=" install
+/bin/install -c -m 0755 debug_inspector.so ./.gem.20160520-21259-1iayldl

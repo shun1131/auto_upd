@@ -1,0 +1,15 @@
+/usr/local/rbenv/versions/2.2.3/bin/ruby -r ./siteconf20160520-12497-4zf3nm.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+make: Warning: File `Makefile' has modification time 0.29 s in the future
+make: warning:  Clock skew detected.  Your build may be incomplete.
+
+make "DESTDIR="
+make: Warning: File `Makefile' has modification time 0.28 s in the future
+make: Nothing to be done for `all'.
+make: warning:  Clock skew detected.  Your build may be incomplete.
+
+make "DESTDIR=" install
+make: Warning: File `Makefile' has modification time 0.27 s in the future
+make: warning:  Clock skew detected.  Your build may be incomplete.

@@ -1,0 +1,19 @@
+/usr/local/rbenv/versions/2.2.3/bin/ruby -r ./siteconf20160520-22752-g1tjqp.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+make: Warning: File `Makefile' has modification time 0.045 s in the future
+make: 警告:  時刻のずれを検出. 不完全なビルド結果になるかもしれません.
+
+make "DESTDIR="
+make: Warning: File `Makefile' has modification time 0.038 s in the future
+compiling bcrypt_ext.c
+compiling crypt.c
+compiling crypt_blowfish.c
+compiling crypt_gensalt.c
+compiling wrapper.c
+linking shared-object bcrypt_ext.so
+make: 警告:  時刻のずれを検出. 不完全なビルド結果になるかもしれません.
+
+make "DESTDIR=" install
+/bin/install -c -m 0755 bcrypt_ext.so ./.gem.20160520-22752-1jiq8vr
