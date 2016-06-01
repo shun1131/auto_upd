@@ -1,37 +1,41 @@
-h1 Listing restaurants
+section.content-header
+  h1 Restaurant
 
-table
-  thead
-    tr
-      th Name
-      th New information
-      th Feature
-      th Feature contents
-      th Feature flag
-      th Vacancy
-      th Vacancy state
-      th Running
-      th Memo
-      th
-      th
-      th
+section.content
 
-  tbody
-    - @restaurants.each do |restaurant|
+
+  table
+    thead
       tr
-        td = restaurant.name
-        td = restaurant.new_information
-        td = restaurant.feature
-        td = restaurant.feature_contents
-        td = restaurant.feature_flag
-        td = restaurant.vacancy
-        td = restaurant.vacancy_state
-        td = restaurant.running
-        td = restaurant.memo
-        td = link_to 'Show', restaurant
-        td = link_to 'Edit', edit_restaurant_path(restaurant)
-        td = link_to 'Destroy', restaurant, data: {:confirm => 'Are you sure?'}, :method => :delete
+        th Name
+        th New information
+        th Feature
+        th Feature contents
+        th Feature flag
+        th Vacancy
+        th Vacancy state
+        th Running
+        th Memo
+        th
+        th
+        th
 
-br
+    tbody
+      - @restaurants.each do |restaurant|
+        tr
+          td = restaurant.name
+          td = restaurant.new_information
+          td = restaurant.feature
+          td = restaurant.feature_contents
+          td = restaurant.feature_flag
+          td = restaurant.vacancy
+          td = restaurant.vacancy_state
+          td = restaurant.running
+          td = restaurant.memo
+          td = link_to 'Show', restaurant
+          td = link_to 'Edit', edit_restaurant_path(restaurant)
+          td = link_to 'Destroy', restaurant, data: {:confirm => 'Are you sure?'}, :method => :delete
 
-= link_to 'New Restaurant', new_restaurant_path
+  br
+
+  = link_to 'New Restaurant', new_restaurant_path
