@@ -1,0 +1,33 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @restaurant.name
+p
+  strong New information:
+  = @restaurant.new_information
+p
+  strong Feature:
+  = @restaurant.feature
+p
+  strong Feature contents:
+  = @restaurant.feature_contents
+p
+  strong Feature flag:
+  = @restaurant.feature_flag
+p
+  strong Vacancy:
+  = @restaurant.vacancy
+p
+  strong Vacancy state:
+  = @restaurant.vacancy_state
+p
+  strong Running:
+  = @restaurant.running
+p
+  strong Memo:
+  = @restaurant.memo
+
+= link_to 'Edit', edit_restaurant_path(@restaurant)
+'|
+= link_to 'Back', restaurants_path
