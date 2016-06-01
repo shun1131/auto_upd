@@ -290,7 +290,7 @@ a:focus {
   display: block;
   float: left;
   height: 50px;
-  font-size: 20px;
+  font-size: 26px;
   line-height: 50px;
   text-align: center;
   width: 230px;
@@ -307,7 +307,7 @@ a:focus {
 }
 .content-header > h1 {
   margin: 0;
-  font-size: 24px;
+  font-size: 34px;
 }
 .content-header > h1 > small {
   font-size: 15px;
