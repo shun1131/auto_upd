@@ -1,0 +1,36 @@
+= form_for @restaurant do |f|
+  - if @restaurant.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@restaurant.errors.count, "error")} prohibited this restaurant from being saved:"
+      ul
+        - @restaurant.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :new_information
+    = f.text_field :new_information
+  .field
+    = f.label :feature
+    = f.text_field :feature
+  .field
+    = f.label :feature_contents
+    = f.text_field :feature_contents
+  .field
+    = f.label :feature_flag
+    = f.text_field :feature_flag
+  .field
+    = f.label :vacancy
+    = f.text_field :vacancy
+  .field
+    = f.label :vacancy_state
+    = f.text_field :vacancy_state
+  .field
+    = f.label :running
+    = f.text_field :running
+  .field
+    = f.label :memo
+    = f.text_field :memo
+  .actions = f.submit

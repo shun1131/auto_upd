@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  new_information: MyString
+  feature: MyString
+  feature_contents: MyString
+  feature_flag: MyString
+  vacancy: MyString
+  vacancy_state: MyString
+  running: MyString
+  memo: MyString
+
+two:
+  name: MyString
+  new_information: MyString
+  feature: MyString
+  feature_contents: MyString
+  feature_flag: MyString
+  vacancy: MyString
+  vacancy_state: MyString
+  running: MyString
+  memo: MyString
