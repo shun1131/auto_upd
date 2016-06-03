@@ -5,7 +5,6 @@ aside.main-sidebar.text-white
     ul.sidebar-menu
       li.header MAIN NAVIGATION
       li
-        a href="pages/widgets.html"
-          i.fa.fa-th
-          span Home
-  /! /.sidebar
+        = link_to 'Home', root_path
+      li
+        = link_to 'Create Restaurant', new_restaurant_path
