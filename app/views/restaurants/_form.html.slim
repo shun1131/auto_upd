@@ -1,36 +1,48 @@
-= form_for @restaurant do |f|
-  - if @restaurant.errors.any?
-    #error_explanation
-      h2 = "#{pluralize(@restaurant.errors.count, "error")} prohibited this restaurant from being saved:"
-      ul
-        - @restaurant.errors.full_messages.each do |message|
-          li = message
-
-  .field
-    = f.label :name
-    = f.text_field :name
-  .field
-    = f.label :new_information
-    = f.text_field :new_information
-  .field
-    = f.label :feature
-    = f.text_field :feature
-  .field
-    = f.label :feature_contents
-    = f.text_field :feature_contents
-  .field
-    = f.label :feature_flag
-    = f.text_field :feature_flag
-  .field
-    = f.label :vacancy
-    = f.text_field :vacancy
-  .field
-    = f.label :vacancy_state
-    = f.text_field :vacancy_state
-  .field
-    = f.label :running
-    = f.text_field :running
-  .field
-    = f.label :memo
-    = f.text_field :memo
-  .actions = f.submit
+.row
+  /! left column
+  .col-md-6
+    /! general form elements
+    .box
+      /! form start
+      = form_for @restaurant do |f|
+        - if @restaurant.errors.any?
+          #error_explanation
+            h2 = "#{pluralize(@restaurant.errors.count, "error")} prohibited this restaurant from being saved:"
+            ul
+              - @restaurant.errors.full_messages.each do |message|
+                li = message
+        .box-body
+          .form-group
+            label 店舗名
+            = f.text_field :name, class: 'form-control'
+          .form-group
+            label お店の最新情報
+            = f.select :new_information,
+            {"やります" => "true",
+             "やりません" => "false"}, {}, class: 'form-control'
+          .form-group
+            label 特集
+            = f.select :feature,
+            {"やります" => "true",
+             "やりません" => "false"}, {}, class: 'form-control'
+          .form-group
+            label 特集・トピックス文言
+            = f.text_field :feature_contents, class: 'form-control'
+          .form-group
+            label お店の空席情報
+            = f.select :vacancy,
+            {"やります" => "true",
+             "やりません" => "false"}, {}, class: 'form-control'
+          .form-group
+            label 空席項目
+            = f.text_field :vacancy_state, class: 'form-control'
+          .form-group
+            label 稼動状態
+            = f.select :running,
+            {"動かします" => "true",
+             "動かしません" => "false"}, {}, class: 'form-control'
+          .form-group
+            label 備考
+            = f.text_area :memo, class: 'form-control'
+          = f.submit 'Done ☺︎', class: 'button btn btn-col'
+          = link_to 'Back', restaurants_path, class: 'button btn m-l'

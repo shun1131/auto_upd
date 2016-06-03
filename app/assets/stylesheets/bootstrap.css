@@ -2533,7 +2533,7 @@ output {
   font-size: 14px;
   line-height: 1.42857143;
   color: #fff;
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0.2);
   background-image: none;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -6562,3 +6562,7 @@ button.close {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+
+.font-bold {
+  font-weight: bold;
+}
