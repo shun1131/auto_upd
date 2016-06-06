@@ -38,3 +38,7 @@ section.content
           div.m-t-xl.text-center
             = link_to 'Edit', edit_restaurant_path(@restaurant), class: 'button btn'
             = link_to 'Back', restaurants_path, class: 'button btn m-l-xl'
+      hr
+      p.m-t-xl ※更新を稼動させるかどうかを変更させる場合は「edit」から稼動状態を変更させてください。店舗情報自体も削除する場合のみ「Delete」ボタンから削除を行ってください。
+      div.m-t-xl.m-b-xl.text-center
+        = link_to 'Delete', restaurant_path, data: {:confirm => 'Are you sure?'}, :method => :delete, class: 'button btn'
