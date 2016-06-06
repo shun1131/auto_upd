@@ -12,7 +12,7 @@
               - @restaurant.errors.full_messages.each do |message|
                 li = message
         .box-body
-          .form-group
+          .form-group.m-t-lg
             label 店舗名
             = f.text_field :name, class: 'form-control'
           .form-group
@@ -44,5 +44,6 @@
           .form-group
             label 備考
             = f.text_area :memo, class: 'form-control'
-          = f.submit 'Done ☺︎', class: 'button btn btn-col'
-          = link_to 'Back', restaurants_path, class: 'button btn m-l'
+          div.m-t-xl.text-center
+            = f.submit 'Done ☺︎', class: 'button btn btn-col'
+            = link_to 'Back', restaurants_path, class: 'button btn m-l'

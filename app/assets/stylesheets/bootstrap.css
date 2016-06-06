@@ -1075,7 +1075,7 @@ html {
 }
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.42857143;
   color: #fff;
   background-color: #fff;
@@ -2964,7 +2964,7 @@ select[multiple].form-group-lg .form-control {
 }
 .btn {
   display: inline-block;
-  padding: 6px 12px;
+  padding: 6px 36px;
   margin-bottom: 0;
   font-size: 14px;
   font-weight: normal;

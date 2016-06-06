@@ -1,33 +1,40 @@
-p#notice = notice
+section.content-header
+  h1 Restaurant Information
 
-p
-  strong Name:
-  = @restaurant.name
-p
-  strong New information:
-  = @restaurant.new_information
-p
-  strong Feature:
-  = @restaurant.feature
-p
-  strong Feature contents:
-  = @restaurant.feature_contents
-p
-  strong Feature flag:
-  = @restaurant.feature_flag
-p
-  strong Vacancy:
-  = @restaurant.vacancy
-p
-  strong Vacancy state:
-  = @restaurant.vacancy_state
-p
-  strong Running:
-  = @restaurant.running
-p
-  strong Memo:
-  = @restaurant.memo
-
-= link_to 'Edit', edit_restaurant_path(@restaurant)
-'|
-= link_to 'Back', restaurants_path
+section.content
+  .row
+    /! left column
+    .col-md-6
+      /! general form elements
+      .box
+        .box-header
+          h3.box-title
+        .box-body
+          table.table.table-bordered
+            tr
+              th 店舗名
+              td = @restaurant.name
+            tr
+              th お店の最新情報
+              td = @restaurant.new_information
+            tr
+              th 特集
+              td = @restaurant.feature
+            tr
+              th 特集・トピックス文言
+              td = @restaurant.feature_contents
+            tr
+              th お店の空席情報
+              td = @restaurant.vacancy
+            tr
+              th 空席項目
+              td = @restaurant.vacancy_state
+            tr
+              th 稼動状態
+              td = @restaurant.running
+            tr
+              th 備考
+              td = @restaurant.memo
+          div.m-t-xl.text-center
+            = link_to 'Edit', edit_restaurant_path(@restaurant), class: 'button btn'
+            = link_to 'Back', restaurants_path, class: 'button btn m-l-xl'
