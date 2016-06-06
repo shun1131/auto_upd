@@ -19,13 +19,12 @@ section.content
               th
               th
               th
-            tr
-              - @restaurants.each do |restaurant|
-                tr
-                  td = restaurant.name
-                  td = restaurant.new_information
-                  td = restaurant.feature
-                  td = restaurant.vacancy
-                  td = restaurant.running
-                  td = restaurant.memo
-                  td = link_to '詳細を見る', restaurant, class: 'btn'
+            - @restaurants.each do |restaurant|
+              tr
+                td = restaurant.name
+                td = restaurant.new_information
+                td = restaurant.feature
+                td = restaurant.vacancy
+                td = restaurant.running
+                td = restaurant.memo
+                td = link_to '詳細を見る', restaurant, class: 'btn'
