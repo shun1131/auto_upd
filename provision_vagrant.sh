@@ -69,8 +69,13 @@ systemctl restart mariadb.service
 systemctl enable mariadb.service
 
 cd /vagrant
-rm -rf .git README.md
 bundle install
-bundle exec rails new . -Bf -d mysql
+bundle exec rake db:create
+
+cat << EOS
+-------------------------------
+           Finish
+-------------------------------
+EOS
 
 exit 0
