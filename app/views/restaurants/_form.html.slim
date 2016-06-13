@@ -39,8 +39,10 @@
           .form-group
             label 稼動状態
             = f.select :running,
-            {"動かします" => "true",
-             "動かしません" => "false"}, {}, class: 'form-control'
+            {"動かしません" => "false",
+             "動かします" => "true"}, {}, class: 'form-control'
+            p
+            | ( ※新規登録時は必ず「動かしません」を選択してください。)
           .form-group
             label 備考
             = f.text_area :memo, class: 'form-control'

@@ -1173,6 +1173,15 @@ a:focus {
   width: 100%;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
+
+.no-border-top {
+  border-top: none !important;
+}
+
+.add-table-border {
+  border-bottom: solid 1px #fff;
+}
+
 .box.box-primary {
   border-top-color: #3c8dbc;
 }
@@ -4117,6 +4126,10 @@ Gradient Background colors
 .p-w-xl {
   padding: 0 40px;
 
+}
+
+.p-table {
+  padding: 10px 20px !important;
 }
 
 .m-xxs {

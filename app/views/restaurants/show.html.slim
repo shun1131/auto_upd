@@ -4,7 +4,7 @@ section.content-header
 section.content
   .row
     /! left column
-    .col-md-6
+    .col-md-7
       /! general form elements
       .box
         .box-header
@@ -42,3 +42,92 @@ section.content
       p.m-t-xl ※更新を稼動させるかどうかを変更させる場合は「edit」から稼動状態を変更させてください。店舗情報自体も削除する場合のみ「Delete」ボタンから削除を行ってください。
       div.m-t-xl.m-b-xl.text-center
         = link_to 'Delete', restaurant_path, data: {:confirm => 'Are you sure?'}, :method => :delete, class: 'button btn'
+    .col-md-5
+      /! general form elements
+      .box.no-border-top
+        .box-header
+          h3.box-title
+            | − 更新時間 −
+        .box-body
+          table.table.table-bordered
+            tr.add-table-border
+              th.p-table 1
+              td.p-table 0:00
+            tr.add-table-border
+              th.p-table 2
+              td.p-table 11:00
+            tr.add-table-border
+              th.p-table 3
+              td.p-table 12:15
+            tr.add-table-border
+              th.p-table 4
+              td.p-table 12:30
+            tr.add-table-border
+              th.p-table 5
+              td.p-table 13:45
+            tr.add-table-border
+              th.p-table 6
+              td.p-table 15:00
+            tr.add-table-border
+              th.p-table 7
+              td.p-table 17:00
+            tr.add-table-border
+              th.p-table 8
+              td.p-table 17:15
+            tr.add-table-border
+              th.p-table 9
+              td.p-table 17:15
+            tr.add-table-border
+              th.p-table 10
+              td.p-table 17:15
+            tr.add-table-border
+              th.p-table 11
+              td.p-table 17:15
+            tr.add-table-border
+              th.p-table 12
+              td.p-table 17:15
+            tr.add-table-border
+              th.p-table 13
+              td.p-table 17:15
+            tr.add-table-border
+              th.p-table 14
+              td.p-table 17:15
+            tr.add-table-border
+              th.p-table 15
+              td.p-table 17:15
+            tr.add-table-border
+              th.p-table 16
+              td.p-table 17:15
+            tr.add-table-border
+              th.p-table 17
+              td.p-table 17:15
+            tr.add-table-border
+              th.p-table 18
+              td.p-table 17:15
+            tr.add-table-border
+              th.p-table 19
+              td.p-table 17:15
+            tr.add-table-border
+              th.p-table 20
+              td.p-table 17:15
+            tr.add-table-border
+              th.p-table 21
+              td.p-table 17:15
+            tr.add-table-border
+              th.p-table 22
+              td.p-table 17:15
+            tr.add-table-border
+              th.p-table 23
+              td.p-table 17:15
+            tr.add-table-border
+              th.p-table 24
+              td.p-table 17:15
+          div.m-t-xl.text-center
+            = link_to 'Edit', edit_restaurant_path(@restaurant), class: 'button btn'
+        .box-body
+          p
+          | スケジュールがまだ決まっていません。
+          br
+          | 下記のボタンより更新時間の登録を行ってください。
+          div.m-t-xl.text-center
+            = link_to 'New', edit_restaurant_path(@restaurant), class: 'button btn'
