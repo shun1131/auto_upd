@@ -1,9 +1,6 @@
 .row
-  /! left column
   .col-md-6
-    /! general form elements
     .box
-      /! form start
       = form_for @restaurant do |f|
         - if @restaurant.errors.any?
           #error_explanation

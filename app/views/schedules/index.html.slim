@@ -1,0 +1,213 @@
+h1 Listing schedules
+
+table
+  thead
+    tr
+      th Restaurant
+      th Time0000
+      th Time0015
+      th Time0030
+      th Time0045
+      th Time0100
+      th Time0115
+      th Time0130
+      th Time0145
+      th Time0200
+      th Time0215
+      th Time0230
+      th Time0245
+      th Time0300
+      th Time0315
+      th Time0330
+      th Time0345
+      th Time0400
+      th Time0415
+      th Time0430
+      th Time0445
+      th Time0500
+      th Time0515
+      th Time0530
+      th Time0545
+      th Time0600
+      th Time0615
+      th Time0630
+      th Time0645
+      th Time0700
+      th Time0715
+      th Time0730
+      th Time0745
+      th Time0800
+      th Time0815
+      th Time0830
+      th Time0845
+      th Time0900
+      th Time0915
+      th Time0930
+      th Time0945
+      th Time1000
+      th Time1015
+      th Time1030
+      th Time1045
+      th Time1100
+      th Time1115
+      th Time1130
+      th Time1145
+      th Time1200
+      th Time1215
+      th Time1230
+      th Time1245
+      th Time1300
+      th Time1315
+      th Time1330
+      th Time1345
+      th Time1400
+      th Time1415
+      th Time1430
+      th Time1445
+      th Time1500
+      th Time1515
+      th Time1530
+      th Time1545
+      th Time1600
+      th Time1615
+      th Time1630
+      th Time1645
+      th Time1700
+      th Time1715
+      th Time1730
+      th Time1745
+      th Time1800
+      th Time1815
+      th Time1830
+      th Time1845
+      th Time1900
+      th Time1915
+      th Time1930
+      th Time1945
+      th Time2000
+      th Time2015
+      th Time2030
+      th Time2045
+      th Time2100
+      th Time2115
+      th Time2130
+      th Time2145
+      th Time2200
+      th Time2215
+      th Time2230
+      th Time2245
+      th Time2300
+      th Time2315
+      th Time2330
+      th Time2345
+      th
+      th
+      th
+
+  tbody
+    - @schedules.each do |schedule|
+      tr
+        td = schedule.restaurant_id
+        td = schedule.time0000
+        td = schedule.time0015
+        td = schedule.time0030
+        td = schedule.time0045
+        td = schedule.time0100
+        td = schedule.time0115
+        td = schedule.time0130
+        td = schedule.time0145
+        td = schedule.time0200
+        td = schedule.time0215
+        td = schedule.time0230
+        td = schedule.time0245
+        td = schedule.time0300
+        td = schedule.time0315
+        td = schedule.time0330
+        td = schedule.time0345
+        td = schedule.time0400
+        td = schedule.time0415
+        td = schedule.time0430
+        td = schedule.time0445
+        td = schedule.time0500
+        td = schedule.time0515
+        td = schedule.time0530
+        td = schedule.time0545
+        td = schedule.time0600
+        td = schedule.time0615
+        td = schedule.time0630
+        td = schedule.time0645
+        td = schedule.time0700
+        td = schedule.time0715
+        td = schedule.time0730
+        td = schedule.time0745
+        td = schedule.time0800
+        td = schedule.time0815
+        td = schedule.time0830
+        td = schedule.time0845
+        td = schedule.time0900
+        td = schedule.time0915
+        td = schedule.time0930
+        td = schedule.time0945
+        td = schedule.time1000
+        td = schedule.time1015
+        td = schedule.time1030
+        td = schedule.time1045
+        td = schedule.time1100
+        td = schedule.time1115
+        td = schedule.time1130
+        td = schedule.time1145
+        td = schedule.time1200
+        td = schedule.time1215
+        td = schedule.time1230
+        td = schedule.time1245
+        td = schedule.time1300
+        td = schedule.time1315
+        td = schedule.time1330
+        td = schedule.time1345
+        td = schedule.time1400
+        td = schedule.time1415
+        td = schedule.time1430
+        td = schedule.time1445
+        td = schedule.time1500
+        td = schedule.time1515
+        td = schedule.time1530
+        td = schedule.time1545
+        td = schedule.time1600
+        td = schedule.time1615
+        td = schedule.time1630
+        td = schedule.time1645
+        td = schedule.time1700
+        td = schedule.time1715
+        td = schedule.time1730
+        td = schedule.time1745
+        td = schedule.time1800
+        td = schedule.time1815
+        td = schedule.time1830
+        td = schedule.time1845
+        td = schedule.time1900
+        td = schedule.time1915
+        td = schedule.time1930
+        td = schedule.time1945
+        td = schedule.time2000
+        td = schedule.time2015
+        td = schedule.time2030
+        td = schedule.time2045
+        td = schedule.time2100
+        td = schedule.time2115
+        td = schedule.time2130
+        td = schedule.time2145
+        td = schedule.time2200
+        td = schedule.time2215
+        td = schedule.time2230
+        td = schedule.time2245
+        td = schedule.time2300
+        td = schedule.time2315
+        td = schedule.time2330
+        td = schedule.time2345
+        td = link_to 'Show', schedule
+        td = link_to 'Edit', edit_schedule_path(schedule)
+        td = link_to 'Destroy', schedule, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Schedule', new_schedule_path
