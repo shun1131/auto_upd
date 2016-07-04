@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  restaurant_id: 1
+  new_information: MyString
+  feature: MyString
+  vacancy: MyString
+  propriety: MyString
+
+two:
+  restaurant_id: 1
+  new_information: MyString
+  feature: MyString
+  vacancy: MyString
+  propriety: MyString
