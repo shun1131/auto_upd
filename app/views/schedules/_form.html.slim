@@ -1,0 +1,974 @@
+.row
+  .col-md-6
+    .box
+      = form_for [@restaurant, @schedule] do |f|
+        - if @schedule.errors.any?
+          #error_explanation
+            h2 = "#{pluralize(@schedule.errors.count, "error")} prohibited this schedule from being saved:"
+            ul
+              - @schedule.errors.full_messages.each do |message|
+                li = message
+        .box-body
+          .form-group
+            label 00:00
+            br
+            span.m-r 更新
+            = f.radio_button :time0000, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time0000, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 00:15
+            br
+            span.m-r 更新
+            = f.radio_button :time0015, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time0015, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 00:30
+            br
+            span.m-r 更新
+            = f.radio_button :time0030, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time0030, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 00:45
+            br
+            span.m-r 更新
+            = f.radio_button :time0045, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time0045, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 01:00
+            br
+            span.m-r 更新
+            = f.radio_button :time0100, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time0100, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 01:15
+            br
+            span.m-r 更新
+            = f.radio_button :time0115, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time0115, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 01:30
+            br
+            span.m-r 更新
+            = f.radio_button :time0130, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time0130, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 01:45
+            br
+            span.m-r 更新
+            = f.radio_button :time0145, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time0145, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 02:00
+            br
+            span.m-r 更新
+            = f.radio_button :time0200, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time0200, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 02:15
+            br
+            span.m-r 更新
+            = f.radio_button :time0215, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time0215, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 02:30
+            br
+            span.m-r 更新
+            = f.radio_button :time0230, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time0230, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 02:45
+            br
+            span.m-r 更新
+            = f.radio_button :time0245, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time0245, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 03:00
+            br
+            span.m-r 更新
+            = f.radio_button :time0300, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time0300, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 03:15
+            br
+            span.m-r 更新
+            = f.radio_button :time0315, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time0315, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 03:30
+            br
+            span.m-r 更新
+            = f.radio_button :time0330, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time0330, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 03:45
+            br
+            span.m-r 更新
+            = f.radio_button :time0345, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time0345, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 04:00
+            br
+            span.m-r 更新
+            = f.radio_button :time0400, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time0400, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 04:15
+            br
+            span.m-r 更新
+            = f.radio_button :time0415, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time0415, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 04:30
+            br
+            span.m-r 更新
+            = f.radio_button :time0430, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time0430, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 04:45
+            br
+            span.m-r 更新
+            = f.radio_button :time0445, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time0445, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 05:00
+            br
+            span.m-r 更新
+            = f.radio_button :time0500, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time0500, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 05:15
+            br
+            span.m-r 更新
+            = f.radio_button :time0515, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time0515, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 05:30
+            br
+            span.m-r 更新
+            = f.radio_button :time0530, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time0530, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 05:45
+            br
+            span.m-r 更新
+            = f.radio_button :time0545, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time0545, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 06:00
+            br
+            span.m-r 更新
+            = f.radio_button :time0600, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time0600, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 06:15
+            br
+            span.m-r 更新
+            = f.radio_button :time0615, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time0615, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 06:30
+            br
+            span.m-r 更新
+            = f.radio_button :time0630, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time0630, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 06:45
+            br
+            span.m-r 更新
+            = f.radio_button :time0645, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time0645, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 07:00
+            br
+            span.m-r 更新
+            = f.radio_button :time0700, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time0700, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 07:15
+            br
+            span.m-r 更新
+            = f.radio_button :time0715, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time0715, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 07:30
+            br
+            span.m-r 更新
+            = f.radio_button :time0730, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time0730, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 07:45
+            br
+            span.m-r 更新
+            = f.radio_button :time0745, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time0745, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 08:00
+            br
+            span.m-r 更新
+            = f.radio_button :time0800, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time0800, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 08:15
+            br
+            span.m-r 更新
+            = f.radio_button :time0815, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time0815, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 08:30
+            br
+            span.m-r 更新
+            = f.radio_button :time0830, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time0830, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 08:45
+            br
+            span.m-r 更新
+            = f.radio_button :time0845, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time0845, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 09:00
+            br
+            span.m-r 更新
+            = f.radio_button :time0900, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time0900, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 09:15
+            br
+            span.m-r 更新
+            = f.radio_button :time0915, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time0915, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 09:30
+            br
+            span.m-r 更新
+            = f.radio_button :time0930, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time0930, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 09:45
+            br
+            span.m-r 更新
+            = f.radio_button :time0945, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time0945, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 10:00
+            br
+            span.m-r 更新
+            = f.radio_button :time1000, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time1000, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 10:15
+            br
+            span.m-r 更新
+            = f.radio_button :time1015, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time1015, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 10:30
+            br
+            span.m-r 更新
+            = f.radio_button :time1030, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time1030, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 10:45
+            br
+            span.m-r 更新
+            = f.radio_button :time1045, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time1045, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 11:00
+            br
+            span.m-r 更新
+            = f.radio_button :time1100, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time1100, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 11:15
+            br
+            span.m-r 更新
+            = f.radio_button :time1115, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time1115, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 11:30
+            br
+            span.m-r 更新
+            = f.radio_button :time1130, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time1130, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 11:45
+            br
+            span.m-r 更新
+            = f.radio_button :time1145, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time1145, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 12:00
+            br
+            span.m-r 更新
+            = f.radio_button :time1200, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time1200, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 12:15
+            br
+            span.m-r 更新
+            = f.radio_button :time1215, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time1215, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 12:30
+            br
+            span.m-r 更新
+            = f.radio_button :time1230, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time1230, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 12:45
+            br
+            span.m-r 更新
+            = f.radio_button :time1245, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time1245, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 13:00
+            br
+            span.m-r 更新
+            = f.radio_button :time1300, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time1300, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 13:15
+            br
+            span.m-r 更新
+            = f.radio_button :time1315, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time1315, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 13:30
+            br
+            span.m-r 更新
+            = f.radio_button :time1330, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time1330, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 13:45
+            br
+            span.m-r 更新
+            = f.radio_button :time1345, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time1345, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 14:00
+            br
+            span.m-r 更新
+            = f.radio_button :time1400, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time1400, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 14:15
+            br
+            span.m-r 更新
+            = f.radio_button :time1415, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time1415, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 14:30
+            br
+            span.m-r 更新
+            = f.radio_button :time1430, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time1430, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 14:45
+            br
+            span.m-r 更新
+            = f.radio_button :time1445, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time1445, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 15:00
+            br
+            span.m-r 更新
+            = f.radio_button :time1500, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time1500, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 15:15
+            br
+            span.m-r 更新
+            = f.radio_button :time1515, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time1515, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 15:30
+            br
+            span.m-r 更新
+            = f.radio_button :time1530, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time1530, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 15:45
+            br
+            span.m-r 更新
+            = f.radio_button :time1545, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time1545, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 16:00
+            br
+            span.m-r 更新
+            = f.radio_button :time1600, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time1600, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 16:15
+            br
+            span.m-r 更新
+            = f.radio_button :time1615, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time1615, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 16:30
+            br
+            span.m-r 更新
+            = f.radio_button :time1630, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time1630, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 16:45
+            br
+            span.m-r 更新
+            = f.radio_button :time1645, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time1645, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 17:00
+            br
+            span.m-r 更新
+            = f.radio_button :time1700, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time1700, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 17:15
+            br
+            span.m-r 更新
+            = f.radio_button :time1715, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time1715, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 17:30
+            br
+            span.m-r 更新
+            = f.radio_button :time1730, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time1730, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 17:45
+            br
+            span.m-r 更新
+            = f.radio_button :time1745, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time1745, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 18:00
+            br
+            span.m-r 更新
+            = f.radio_button :time1800, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time1800, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 18:15
+            br
+            span.m-r 更新
+            = f.radio_button :time1815, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time1815, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 18:30
+            br
+            span.m-r 更新
+            = f.radio_button :time1830, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time1830, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 18:45
+            br
+            span.m-r 更新
+            = f.radio_button :time1845, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time1845, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 19:00
+            br
+            span.m-r 更新
+            = f.radio_button :time1900, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time1900, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 19:15
+            br
+            span.m-r 更新
+            = f.radio_button :time1915, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time1915, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 19:30
+            br
+            span.m-r 更新
+            = f.radio_button :time1930, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time1930, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 19:45
+            br
+            span.m-r 更新
+            = f.radio_button :time1945, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time1945, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 20:00
+            br
+            span.m-r 更新
+            = f.radio_button :time2000, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time2000, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 20:15
+            br
+            span.m-r 更新
+            = f.radio_button :time2015, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time2015, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 20:30
+            br
+            span.m-r 更新
+            = f.radio_button :time2030, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time2030, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 20:45
+            br
+            span.m-r 更新
+            = f.radio_button :time2045, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time2045, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 21:00
+            br
+            span.m-r 更新
+            = f.radio_button :time2100, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time2100, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 21:15
+            br
+            span.m-r 更新
+            = f.radio_button :time2115, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time2115, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 21:30
+            br
+            span.m-r 更新
+            = f.radio_button :time2130, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time2130, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 21:45
+            br
+            span.m-r 更新
+            = f.radio_button :time2145, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time2145, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 22:00
+            br
+            span.m-r 更新
+            = f.radio_button :time2200, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time2200, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 22:15
+            br
+            span.m-r 更新
+            = f.radio_button :time2215, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time2215, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 22:30
+            br
+            span.m-r 更新
+            = f.radio_button :time2230, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time2230, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 22:45
+            br
+            span.m-r 更新
+            = f.radio_button :time2245, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time2245, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 23:00
+            br
+            span.m-r 更新
+            = f.radio_button :time2300, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time2300, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 23:15
+            br
+            span.m-r 更新
+            = f.radio_button :time2315, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time2315, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 23:30
+            br
+            span.m-r 更新
+            = f.radio_button :time2330, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time2330, 0, class: 'm-r-lg'
+            hr
+          .form-group
+            label 23:45
+            br
+            span.m-r 更新
+            = f.radio_button :time2345, 1, class: 'm-r-lg'
+            span.m-l
+            | /
+            span.m-l.m-r しない
+            = f.radio_button :time2345, 0, class: 'm-r-lg'
+            hr
+          div.m-t-xl.text-center
+            = f.submit 'Done ☺︎', class: 'button btn btn-col'
+            = link_to 'Back', restaurants_path, class: 'button btn m-l'

@@ -123,11 +123,4 @@ section.content
               th.p-table 24
               td.p-table 17:15
           div.m-t-xl.text-center
-            = link_to 'Edit', edit_restaurant_path(@restaurant), class: 'button btn'
-        .box-body
-          p
-          | スケジュールがまだ決まっていません。
-          br
-          | 下記のボタンより更新時間の登録を行ってください。
-          div.m-t-xl.text-center
-            = link_to 'New', edit_restaurant_path(@restaurant), class: 'button btn'
+            = link_to 'Edit', edit_restaurant_schedule_path(@restaurant, @schedule), class: 'button btn'
