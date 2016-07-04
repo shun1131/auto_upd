@@ -32,6 +32,11 @@ gem 'unicorn'
 # slimの導入
 gem 'slim-rails'
 
+# seedファイルのdump
+gem 'seed_dump'
+
+
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
