@@ -50,77 +50,390 @@ section.content
             | − 更新時間 −
         .box-body
           table.table.table-bordered
+            - @n = 0
             tr.add-table-border
-              th.p-table 1
-              td.p-table 0:00
+              - if @schedule.time0000 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 00:00
             tr.add-table-border
-              th.p-table 2
-              td.p-table 11:00
+              - if @schedule.time0015 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 00:15
             tr.add-table-border
-              th.p-table 3
-              td.p-table 12:15
+              - if @schedule.time0030 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 00:30
             tr.add-table-border
-              th.p-table 4
-              td.p-table 12:30
+              - if @schedule.time0045 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 00:45
             tr.add-table-border
-              th.p-table 5
-              td.p-table 13:45
+              - if @schedule.time0100 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 01:00
             tr.add-table-border
-              th.p-table 6
-              td.p-table 15:00
+              - if @schedule.time0115 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 01:15
             tr.add-table-border
-              th.p-table 7
-              td.p-table 17:00
+              - if @schedule.time0130 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 01:30
             tr.add-table-border
-              th.p-table 8
-              td.p-table 17:15
+              - if @schedule.time0145 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 01:45
             tr.add-table-border
-              th.p-table 9
-              td.p-table 17:15
+              - if @schedule.time0200 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 02:00
             tr.add-table-border
-              th.p-table 10
-              td.p-table 17:15
+              - if @schedule.time0215 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 02:15
             tr.add-table-border
-              th.p-table 11
-              td.p-table 17:15
+              - if @schedule.time0230 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 02:30
             tr.add-table-border
-              th.p-table 12
-              td.p-table 17:15
+              - if @schedule.time0245 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 02:45
             tr.add-table-border
-              th.p-table 13
-              td.p-table 17:15
+              - if @schedule.time0300 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 03:00
             tr.add-table-border
-              th.p-table 14
-              td.p-table 17:15
+              - if @schedule.time0315 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 03:15
             tr.add-table-border
-              th.p-table 15
-              td.p-table 17:15
+              - if @schedule.time0330 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 03:30
             tr.add-table-border
-              th.p-table 16
-              td.p-table 17:15
+              - if @schedule.time0345 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 03:45
             tr.add-table-border
-              th.p-table 17
-              td.p-table 17:15
+              - if @schedule.time0400 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 04:00
             tr.add-table-border
-              th.p-table 18
-              td.p-table 17:15
+              - if @schedule.time0415 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 04:15
             tr.add-table-border
-              th.p-table 19
-              td.p-table 17:15
+              - if @schedule.time0430 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 04:30
             tr.add-table-border
-              th.p-table 20
-              td.p-table 17:15
+              - if @schedule.time0445 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 04:45
             tr.add-table-border
-              th.p-table 21
-              td.p-table 17:15
+              - if @schedule.time0500 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 05:00
             tr.add-table-border
-              th.p-table 22
-              td.p-table 17:15
+              - if @schedule.time0515 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 05:15
             tr.add-table-border
-              th.p-table 23
-              td.p-table 17:15
+              - if @schedule.time0530 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 05:30
             tr.add-table-border
-              th.p-table 24
-              td.p-table 17:15
+              - if @schedule.time0545 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 05:45
+            tr.add-table-border
+              - if @schedule.time0600 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 06:00
+            tr.add-table-border
+              - if @schedule.time0615 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 06:15
+            tr.add-table-border
+              - if @schedule.time0630 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 06:30
+            tr.add-table-border
+              - if @schedule.time0645 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 06:45
+            tr.add-table-border
+              - if @schedule.time0700 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 07:00
+            tr.add-table-border
+              - if @schedule.time0715 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 07:15
+            tr.add-table-border
+              - if @schedule.time0730 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 07:30
+            tr.add-table-border
+              - if @schedule.time0745 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 07:45
+            tr.add-table-border
+              - if @schedule.time0800 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 08:00
+            tr.add-table-border
+              - if @schedule.time0815 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 08:15
+            tr.add-table-border
+              - if @schedule.time0830 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 08:30
+            tr.add-table-border
+              - if @schedule.time0845 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 08:45
+            tr.add-table-border
+              - if @schedule.time0900 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 09:00
+            tr.add-table-border
+              - if @schedule.time0915 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 09:15
+            tr.add-table-border
+              - if @schedule.time0930 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 09:30
+            tr.add-table-border
+              - if @schedule.time0945 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 09:45
+            tr.add-table-border
+              - if @schedule.time1000 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 10:00
+            tr.add-table-border
+              - if @schedule.time1015 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 10:15
+            tr.add-table-border
+              - if @schedule.time1030 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 10:30
+            tr.add-table-border
+              - if @schedule.time1045 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 10:45
+            tr.add-table-border
+              - if @schedule.time1100 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 11:00
+            tr.add-table-border
+              - if @schedule.time1115 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 11:15
+            tr.add-table-border
+              - if @schedule.time1130 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 11:30
+            tr.add-table-border
+              - if @schedule.time1145 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 11:45
+            tr.add-table-border
+              - if @schedule.time1200 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 12:00
+            tr.add-table-border
+              - if @schedule.time1215 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 12:15
+            tr.add-table-border
+              - if @schedule.time1230 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 12:30
+            tr.add-table-border
+              - if @schedule.time1245 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 12:45
+            tr.add-table-border
+              - if @schedule.time1300 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 13:00
+            tr.add-table-border
+              - if @schedule.time1315 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 13:15
+            tr.add-table-border
+              - if @schedule.time1330 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 13:30
+            tr.add-table-border
+              - if @schedule.time1345 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 13:45
+            tr.add-table-border
+              - if @schedule.time1400 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 14:00
+            tr.add-table-border
+              - if @schedule.time1415 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 14:15
+            tr.add-table-border
+              - if @schedule.time1430 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 14:30
+            tr.add-table-border
+              - if @schedule.time1445 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 14:45
+            tr.add-table-border
+              - if @schedule.time1500 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 15:00
+            tr.add-table-border
+              - if @schedule.time1515 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 15:15
+            tr.add-table-border
+              - if @schedule.time1530 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 15:30
+            tr.add-table-border
+              - if @schedule.time1545 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 15:45
+            tr.add-table-border
+              - if @schedule.time1600 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 16:00
+            tr.add-table-border
+              - if @schedule.time1615 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 16:15
+            tr.add-table-border
+              - if @schedule.time1630 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 16:30
+            tr.add-table-border
+              - if @schedule.time1645 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 16:45
+            tr.add-table-border
+              - if @schedule.time1700 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 17:00
+            tr.add-table-border
+              - if @schedule.time1715 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 17:15
+            tr.add-table-border
+              - if @schedule.time1730 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 17:30
+            tr.add-table-border
+              - if @schedule.time1745 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 17:45
+            tr.add-table-border
+              - if @schedule.time1800 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 18:00
+            tr.add-table-border
+              - if @schedule.time1815 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 18:15
+            tr.add-table-border
+              - if @schedule.time1830 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 18:30
+            tr.add-table-border
+              - if @schedule.time1845 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 18:45
+            tr.add-table-border
+              - if @schedule.time1900 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 19:00
+            tr.add-table-border
+              - if @schedule.time1915 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 19:15
+            tr.add-table-border
+              - if @schedule.time1930 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 19:30
+            tr.add-table-border
+              - if @schedule.time1945 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 19:45
+            tr.add-table-border
+              - if @schedule.time2000 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 20:00
+            tr.add-table-border
+              - if @schedule.time2015 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 20:15
+            tr.add-table-border
+              - if @schedule.time2030 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 20:30
+            tr.add-table-border
+              - if @schedule.time2045 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 20:45
+            tr.add-table-border
+              - if @schedule.time2100 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 21:00
+            tr.add-table-border
+              - if @schedule.time2115 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 21:15
+            tr.add-table-border
+              - if @schedule.time2130 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 21:30
+            tr.add-table-border
+              - if @schedule.time2145 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 21:45
+            tr.add-table-border
+              - if @schedule.time2200 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 22:00
+            tr.add-table-border
+              - if @schedule.time2215 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 22:15
+            tr.add-table-border
+              - if @schedule.time2230 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 22:30
+            tr.add-table-border
+              - if @schedule.time2245 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 22:45
+            tr.add-table-border
+              - if @schedule.time2300 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 23:00
+            tr.add-table-border
+              - if @schedule.time2315 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 23:15
+            tr.add-table-border
+              - if @schedule.time2330 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 23:30
+            tr.add-table-border
+              - if @schedule.time2345 == 1
+                th.p-table = @n = @n + 1
+                td.p-table 23:45
           div.m-t-xl.text-center
             = link_to 'Edit', edit_restaurant_schedule_path(@restaurant, @schedule), class: 'button btn'
