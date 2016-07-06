@@ -1,5 +1,6 @@
 class SchedulesController < ApplicationController
   before_action :set_schedule, only: [:edit, :update]
+  before_action :authenticate_user!
 
 
   def index

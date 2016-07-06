@@ -41,6 +41,9 @@ gem 'font-awesome-rails', '4.3.0.0'
 # 検索機能の追加
 gem 'ransack'
 
+# ログイン機能用
+gem 'devise', '3.5.1'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

@@ -1,5 +1,6 @@
 class RecordController < ApplicationController
   before_action :set_ransack, only: :index
+  before_action :authenticate_user!
 
   def index
   end
