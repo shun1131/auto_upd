@@ -38,6 +38,8 @@ gem 'seed_dump'
 # font awesome
 gem 'font-awesome-rails', '4.3.0.0'
 
+# 検索機能の追加
+gem 'ransack'
 
 
 # Use Capistrano for deployment

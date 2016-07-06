@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     resources :schedules, only: [:new, :create, :edit, :update]
   end
 
-  get 'record/index'
+  get 'record' => 'record#index'
 
   root 'restaurants#index'
 end
