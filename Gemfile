@@ -35,6 +35,9 @@ gem 'slim-rails'
 # seedファイルのdump
 gem 'seed_dump'
 
+# font awesome
+gem 'font-awesome-rails', '4.3.0.0'
+
 
 
 # Use Capistrano for deployment

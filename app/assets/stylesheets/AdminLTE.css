@@ -2133,7 +2133,7 @@ a:focus {
 }
 /* PAGINATION */
 .pagination > li > a {
-  background: #fafafa;
+  background: ;
   color: #fff;
 }
 .pagination > li:first-of-type a,
