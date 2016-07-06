@@ -4128,6 +4128,10 @@ Gradient Background colors
 
 }
 
+.p-side {
+  padding:0 40px 0 40px !important;
+}
+
 .p-table {
   padding: 10px 20px !important;
 }
@@ -4398,6 +4402,10 @@ Gradient Background colors
 
 .m-b-n-xl {
   margin-bottom: -40px;
+}
+
+.margin-auto{
+  margin: 0 auto;
 }
 
 .space-15 {

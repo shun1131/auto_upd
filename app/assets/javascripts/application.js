@@ -14,3 +14,4 @@
 //= require jquery_ujs
 //= require_tree .
 //= require datatables/datatables.min.js
+//= require datapicker/bootstrap-datepicker.js

@@ -1,5 +1,14 @@
 class RecordController < ApplicationController
+  before_action :set_ransack, only: :index
+
   def index
-    @records = Record.all.order(created_at: :desc)
+  end
+
+  private
+  def set_ransack
+    @q = Record.all.ransack(params[:q])
+    if params[:q].present?
+      @records = @q.result(distinct: true)
+    end
   end
 end

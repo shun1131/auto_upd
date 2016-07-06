@@ -14,5 +14,6 @@
  *= require font-awesome
  *= require_self
  *= require animate.css
- *= require datatables/datatables.min.css 
+ *= require datatables/datatables.min.css
+ *= require datapicker/datepicker3.css 
  */

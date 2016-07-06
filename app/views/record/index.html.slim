@@ -6,39 +6,35 @@ section.content
     .col-lg-12
       .ibox.float-e-margins
         .ibox-title
-          h4 Search
+          h4 * 検索条件の指定 *
         .ibox-content
-          .row
-            .col-sm-2
-              .input-group
-                label あうあう
-                input.form-control type="text" /
-            .col-sm-3
-              label あうあう
-              #data_1.form-group
-                .input-group.date
-                  span.input-group-addon
-                    i.fa.fa-calendar
-                  input.form-control type="text" /
-            .col-sm-3
-              label あうあう
-              #data_1.form-group
-                .input-group.date
-                  span.input-group-addon
-                    i.fa.fa-calendar
-                  input.form-control type="text" /
-            .col-sm-1
-              .input-group
-                label あうあう
-                input.form-control type="text" /
-            .col-sm-3
-              .input-group
-                label あうあう
-                input.form-control type="text" /
-          .row
-            .col-sm-12
-              .input-group.margin-auto
-                input.form-control type="button" value="ボタン" /
+          = search_form_for @q, url: record_path do |f|
+            .row
+              .col-sm-3
+                label 店舗名
+                = f.search_field :restaurant_name_eq, class: "form-control", autofocus: true
+              .col-sm-3
+                label 更新日時 from
+                #data_1.form-group
+                  .input-group.date
+                    span.input-group-addon
+                      i.fa.fa-calendar
+                    = f.search_field :created_at_from, class: 'form-control date-form'
+              .col-sm-3
+                label 更新日時 to
+                #data_1.form-group
+                  .input-group.date
+                    span.input-group-addon
+                      i.fa.fa-calendar
+                    = f.search_field :created_at_to, class: 'form-control date-form'
+              .col-sm-2
+                .input-group
+                  label 更新可否
+                  = f.select :propriety_eq, [["更新済み", "true"], ["失敗", "falth"]],{:include_blank => true} , class: "form-control"
+            .row.m-t
+              .col-sm-12
+                .input-group.margin-auto
+                  = f.submit 'search', class: "form-control p-side"
   .row.m-t-xl
     .col-md-12
       .box
@@ -55,7 +51,7 @@ section.content
                 th 空席情報
                 th 更新可否
             tbody
-              - @records.each do |record|
+              - @records.try!(:each) do |record|
                 tr
                   td = record.restaurant.name
                   td = local_time record.created_at
@@ -63,3 +59,15 @@ section.content
                   td = symbol_display(record.feature)
                   td = symbol_display(record.vacancy)
                   td = propriety_display(record.propriety)
+
+javascript:
+  $(document).ready(function(){
+    $('#data_1 .input-group.date').datepicker({
+              todayBtn: "linked",
+              keyboardNavigation: false,
+              forceParse: false,
+              calenderWeeks: true,
+              autoclose: true,
+              format: "yyyy/mm/dd"
+          });
+      });
