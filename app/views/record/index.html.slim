@@ -2,31 +2,64 @@ section.content-header
   h1 Update Records
 
 section.content
-  .row
+  .row.m-t
+    .col-lg-12
+      .ibox.float-e-margins
+        .ibox-title
+          h4 Search
+        .ibox-content
+          .row
+            .col-sm-2
+              .input-group
+                label あうあう
+                input.form-control type="text" /
+            .col-sm-3
+              label あうあう
+              #data_1.form-group
+                .input-group.date
+                  span.input-group-addon
+                    i.fa.fa-calendar
+                  input.form-control type="text" /
+            .col-sm-3
+              label あうあう
+              #data_1.form-group
+                .input-group.date
+                  span.input-group-addon
+                    i.fa.fa-calendar
+                  input.form-control type="text" /
+            .col-sm-1
+              .input-group
+                label あうあう
+                input.form-control type="text" /
+            .col-sm-3
+              .input-group
+                label あうあう
+                input.form-control type="text" /
+          .row
+            .col-sm-12
+              .input-group.margin-auto
+                input.form-control type="button" value="ボタン" /
+  .row.m-t-xl
     .col-md-12
       .box
         .box-header
-          h3.box-title
+          h3.box-title 検索結果
         .box-body
-          table.table.table-bordered
-            tr
-              th 店舗名
-              th 更新日時
-              th お店の最新情報
-              th 特集
-              th 空席情報
-              th 更新可否
-            tr
-              td テスト店舗
-              td 2016.10.10
-              td ◯
-              td
-              td
-              td 更新済み
-            tr
-              td 居酒屋てすと
-              td 2016.10.10
-              td
-              td ◯
-              td
-              td 失敗
+          table.table.table-bordered.dataTables-example
+            thead
+              tr
+                th 店舗名
+                th 更新日時
+                th お店の最新情報
+                th 特集
+                th 空席情報
+                th 更新可否
+            tbody
+              - @records.each do |record|
+                tr
+                  td = record.restaurant.name
+                  td = local_time record.created_at
+                  td = symbol_display(record.new_information)
+                  td = symbol_display(record.feature)
+                  td = symbol_display(record.vacancy)
+                  td = propriety_display(record.propriety)
