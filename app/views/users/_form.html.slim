@@ -1,0 +1,19 @@
+.row
+  .col-md-6
+    .box
+      = form_for @user do |f|
+        - if @user.errors.any?
+          #error_explanation
+            h2 = "#{pluralize(@user.errors.count, "error")} prohibited this user from being saved:"
+            ul
+              - @user.errors.full_messages.each do |message|
+                li = message
+        .box-body
+          .form-group.m-t-lg
+            = f.label :name
+            = f.text_field :name, class: 'form-control'
+          .form-group
+            = f.label :email
+            = f.text_field :email, class: 'form-control'
+          div.m-t-xl.text-center
+            = f.submit 'Done ☺︎', class: 'button btn btn-col'

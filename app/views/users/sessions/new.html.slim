@@ -1,0 +1,23 @@
+section.content.m-t-xl
+  .row.m-t-xl
+    .col-md-3
+    .col-md-4
+      .box style="border:none;"
+        h1 Log in
+        hr
+        .box-body
+          = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+            .form-group.m-t
+              = f.label :email
+              = f.email_field :email, autofocus: true, class: 'form-control'
+            .form-group
+              = f.label :password
+              = f.password_field :password, autocomplete: "off", class: 'form-control'
+            - if devise_mapping.rememberable?
+              .form-group.m-t
+                = f.check_box :remember_me
+                = f.label :remember_me, class: 'm-l'
+            div.m-t-xl.text-center
+              = f.submit "☺︎ Log in ☺︎", class: 'button btn btn-col'
+          .text-center.m-t-xl
+            = render "users/shared/links"

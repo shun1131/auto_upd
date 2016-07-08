@@ -6,6 +6,5 @@ header.main-header.text-white
     .navbar-custom-menu
       ul.nav.navbar-nav
         li.dropdown.user.user-menu
-          a.dropdown-toggle data-toggle="dropdown" href="#"
-            span.hidden-xs
-              b Logout
+          - if user_signed_in?
+            = link_to "Logout", destroy_user_session_path, method: :delete
