@@ -3,13 +3,12 @@ aside.main-sidebar.text-white
   section.sidebar
     /! sidebar menu: : style can be found in sidebar.less
     ul.sidebar-menu
-      li.header
-        | − MAIN NAVIGATION −
-      li
-        = link_to 'Home', root_path
-      li
-        = link_to 'Create Restaurant', new_restaurant_path
-      li
-        = link_to 'Records', record_path
-      li
-        = link_to 'Create Admin User', new_user_path
+      - if user_signed_in?
+        li.header
+          | − MAIN NAVIGATION −
+        li
+          = link_to 'Home', root_path
+        li
+          = link_to 'Create Restaurant', new_restaurant_path
+        li
+          = link_to 'Records', record_path
