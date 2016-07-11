@@ -44,6 +44,8 @@ gem 'ransack'
 # ログイン機能用
 gem 'devise', '3.5.1'
 
+# 非同期処理用
+gem 'sidekiq'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -59,7 +61,7 @@ group :development, :test do
   # エラー画面をわかりやすく
   gem 'better_errors'
   gem 'binding_of_caller'
-  
+
 end
 
 group :development do
