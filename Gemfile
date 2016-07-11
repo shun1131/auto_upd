@@ -55,6 +55,10 @@ group :development, :test do
   # モデルの出力を表形式に
   gem 'hirb'
   gem 'hirb-unicode'
+
+  # エラー画面をわかりやすく
+  gem 'better_errors'
+  gem 'binding_of_caller'
   
 end
 
