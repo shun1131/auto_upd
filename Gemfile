@@ -51,6 +51,11 @@ gem 'devise', '3.5.1'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+
+  # モデルの出力を表形式に
+  gem 'hirb'
+  gem 'hirb-unicode'
+  
 end
 
 group :development do
