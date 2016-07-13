@@ -13,6 +13,12 @@
             label 店舗名
             = f.text_field :name, class: 'form-control'
           .form-group
+            label ID
+            = f.text_field :account, class: 'form-control'
+          .form-group
+            label PASS
+            = f.text_field :pass, class: 'form-control'
+          .form-group
             label お店の最新情報
             = f.select :new_information,
             {"やります" => "true",
