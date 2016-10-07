@@ -47,6 +47,12 @@ gem 'devise', '3.5.1'
 # 非同期処理用
 gem 'sidekiq'
 
+# リモートサーバー
+gem 'selenium-webdriver'
+
+# Xvfbの立ち上げ
+gem 'headless'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
