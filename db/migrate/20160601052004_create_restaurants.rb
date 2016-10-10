@@ -5,7 +5,7 @@ class CreateRestaurants < ActiveRecord::Migration
       t.integer :new_information
       t.integer :feature
       t.string :feature_contents
-      t.integer :feature_flag
+      t.integer :feature_flag, default: 0
       t.integer :vacancy
       t.string :vacancy_state
       t.integer :running
