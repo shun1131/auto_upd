@@ -5,7 +5,6 @@ class CreateRecords < ActiveRecord::Migration
       t.string :new_information
       t.string :feature
       t.string :vacancy
-      t.string :propriety
 
       t.timestamps null: false
     end

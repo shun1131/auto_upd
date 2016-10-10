@@ -1,10 +1,7 @@
-User.create!([
-  {name: nil, email: "os18700241@gmail.com", encrypted_password: "$2a$10$3mx874BWa5koB.LEftjXh.hYhOGpY9TqhxTwVJmfNM6FJfNhNYKse", reset_password_token: "7e1ffdfb81805a9054df475887ebc0a407e430bd27084c1bcc4ae906e10256cd", reset_password_sent_at: "2016-07-08 07:22:11", remember_created_at: nil, sign_in_count: 6, current_sign_in_at: "2016-07-08 07:45:09", last_sign_in_at: "2016-07-08 07:39:45", current_sign_in_ip: "192.168.33.1", last_sign_in_ip: "192.168.33.1"}
-])
 Record.create!([
-  {restaurant_id: 1, new_information: "true", feature: "true", vacancy: "true", propriety: "true"},
-  {restaurant_id: 2, new_information: "true", feature: "true", vacancy: "true", propriety: "falth"},
-  {restaurant_id: 3, new_information: "true", feature: "falth", vacancy: "falth", propriety: "true"}
+  {restaurant_id: 1, new_information: 1, feature: 1, vacancy: 1},
+  {restaurant_id: 2, new_information: 1, feature: nil, vacancy: 1},
+  {restaurant_id: 3, new_information: 1, feature: nil, vacancy: nil}
 ])
 Restaurant.create!([
   {name: "牡蠣小屋　ドンマサオ", new_information: "true", feature: "true", feature_contents: "何も置いていません", feature_flag: nil, vacancy: "true", vacancy_state: "要確認", running: "true", memo: "てすと店舗", account: "1111111", pass: "0000000"},

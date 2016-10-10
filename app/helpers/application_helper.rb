@@ -7,19 +7,12 @@ module ApplicationHelper
 
   # 可否の表示方法「◯」「×」
   def symbol_display(fit)
-    if fit == "true"
+    if fit == true
       "◯"
+    elsif fit == false
+      "×"
     else
       " "
-    end
-  end
-
-  # 可否の表示方法  更新結果
-  def propriety_display(fit)
-    if fit == "true"
-      "更新済み"
-    else
-      "失敗"
     end
   end
 

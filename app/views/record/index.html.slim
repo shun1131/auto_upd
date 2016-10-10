@@ -27,10 +27,6 @@ section.content
                     span.input-group-addon
                       i.fa.fa-calendar
                     = f.search_field :created_at_to, class: 'form-control date-form'
-              .col-sm-2
-                .input-group
-                  label 更新可否
-                  = f.select :propriety_eq, [["更新済み", "true"], ["失敗", "falth"]],{:include_blank => true} , class: "form-control"
             .row.m-t
               .col-sm-12
                 .input-group.margin-auto
@@ -49,7 +45,6 @@ section.content
                 th お店の最新情報
                 th 特集
                 th 空席情報
-                th 更新可否
             tbody
               - @records.try!(:each) do |record|
                 tr
@@ -58,7 +53,6 @@ section.content
                   td = symbol_display(record.new_information)
                   td = symbol_display(record.feature)
                   td = symbol_display(record.vacancy)
-                  td = propriety_display(record.propriety)
 
 javascript:
   $(document).ready(function(){
