@@ -24,9 +24,9 @@ section.content
                 td = restaurant.name
                 td = restaurant.account
                 td = restaurant.pass
-                td = restaurant.new_information
-                td = restaurant.feature
-                td = restaurant.vacancy
-                td = restaurant.running
+                td = restaurant_display(restaurant.new_information)
+                td = restaurant_display(restaurant.feature)
+                td = restaurant_display(restaurant.vacancy)
+                td = restaurant_display(restaurant.running)
                 td = restaurant.memo
                 td = link_to '詳細を見る', restaurant, class: 'btn'

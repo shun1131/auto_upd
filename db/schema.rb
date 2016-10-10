@@ -15,22 +15,22 @@ ActiveRecord::Schema.define(version: 20160713103351) do
 
   create_table "records", force: :cascade do |t|
     t.integer  "restaurant_id",   limit: 4
-    t.string   "new_information", limit: 255
-    t.string   "feature",         limit: 255
-    t.string   "vacancy",         limit: 255
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.integer  "new_information", limit: 4
+    t.integer  "feature",         limit: 4
+    t.integer  "vacancy",         limit: 4
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
   create_table "restaurants", force: :cascade do |t|
     t.string   "name",             limit: 255
-    t.string   "new_information",  limit: 255
-    t.string   "feature",          limit: 255
+    t.integer  "new_information",  limit: 4
+    t.integer  "feature",          limit: 4
     t.string   "feature_contents", limit: 255
-    t.string   "feature_flag",     limit: 255
-    t.string   "vacancy",          limit: 255
+    t.integer  "feature_flag",     limit: 4
+    t.integer  "vacancy",          limit: 4
     t.string   "vacancy_state",    limit: 255
-    t.string   "running",          limit: 255
+    t.integer  "running",          limit: 4
     t.string   "memo",             limit: 255
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false

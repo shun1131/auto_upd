@@ -22,22 +22,22 @@ section.content
               td = @restaurant.pass
             tr
               th お店の最新情報
-              td = @restaurant.new_information
+              td = restaurant_display(@restaurant.new_information)
             tr
               th 特集
-              td = @restaurant.feature
+              td = restaurant_display(@restaurant.feature)
             tr
               th 特集・トピックス文言
               td = @restaurant.feature_contents
             tr
               th お店の空席情報
-              td = @restaurant.vacancy
+              td = restaurant_display(@restaurant.vacancy)
             tr
               th 空席項目
               td = @restaurant.vacancy_state
             tr
               th 稼動状態
-              td = @restaurant.running
+              td = restaurant_display(@restaurant.running)
             tr
               th 備考
               td = @restaurant.memo

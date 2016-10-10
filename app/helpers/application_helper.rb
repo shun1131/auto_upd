@@ -7,10 +7,18 @@ module ApplicationHelper
 
   # 可否の表示方法「◯」「×」
   def symbol_display(fit)
-    if fit == true
+    if fit == 1
       "◯"
-    elsif fit == false
+    elsif fit == 0
       "×"
+    else
+      " "
+    end
+  end
+
+  def restaurant_display(fit)
+    if fit == 1
+      "◯"
     else
       " "
     end
