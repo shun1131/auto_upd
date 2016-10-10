@@ -21,29 +21,29 @@
           .form-group
             label お店の最新情報
             = f.select :new_information,
-            {"やります" => "true",
-             "やりません" => "false"}, {}, class: 'form-control'
+            {"やります" => 1,
+             "やりません" => 0}, {}, class: 'form-control'
           .form-group
             label 特集
             = f.select :feature,
-            {"やります" => "true",
-             "やりません" => "false"}, {}, class: 'form-control'
+            {"やります" => 1,
+             "やりません" => 0}, {}, class: 'form-control'
           .form-group
             label 特集・トピックス文言
             = f.text_field :feature_contents, class: 'form-control'
           .form-group
             label お店の空席情報
             = f.select :vacancy,
-            {"やります" => "true",
-             "やりません" => "false"}, {}, class: 'form-control'
+            {"やります" => 1,
+             "やりません" => 0}, {}, class: 'form-control'
           .form-group
             label 空席項目
             = f.text_field :vacancy_state, class: 'form-control'
           .form-group
             label 稼動状態
             = f.select :running,
-            {"動かしません" => "false",
-             "動かします" => "true"}, {}, class: 'form-control'
+            {"動かしません" => 0,
+             "動かします" => 1}, {}, class: 'form-control'
             p
             | ( ※新規登録時は必ず「動かしません」を選択してください。)
           .form-group
