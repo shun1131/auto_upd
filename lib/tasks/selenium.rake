@@ -219,4 +219,56 @@ namespace :selenium do
     driver.quit
     headless.destroy
   end
+
+
+  desc "空席サンプル"
+  task vacancy: :environment do
+    p "Waiting..."
+    # ブラウザ起動
+    headless = Headless.new
+    headless.start
+    driver = Selenium::WebDriver.for :chrome
+    # waitの設定
+    driver.manage.timeouts.implicit_wait = 7
+
+    # 更新時間スケジュールを指定
+    guru_updates = Schedule.where(time2330: 1)
+    # 更新開始
+    guru_updates.each do |gu|
+      # 【特集】　更新プロセス
+      if gu.restaurant.feature == 1
+        begin
+          # ぐるなびproにアクセス
+          driver.navigate.to "http://pro.gnavi.co.jp/"
+          # 一度ログアウト
+          driver.navigate.to "https://manage.gnavi.co.jp/ShopAdmin/misc/logout.php"
+          # ログイン
+          element = driver.find_element(:name, 'id')
+          element.send_keys(gu.restaurant.account)
+          element = driver.find_element(:name, 'pass')
+          element.send_keys(gu.restaurant.pass)
+          driver.find_element(:name, 'manageImage').click
+          # 空席情報を更新
+          driver.find_element(:id, 'a_seat3').click
+          # ポップアップを処理
+          alert = driver.switch_to.alert
+          alert.accept
+          p "vacancy successed!!!"
+          vacancy_result = 1
+        rescue => e
+          p "vacancy missed"
+          vacancy_result = 0
+        end
+      end
+      Record.create(
+        restaurant_id: gu.restaurant.id,
+        new_information: nil,
+        feature: nil,
+        vacancy: vacancy_result,
+      )
+    end
+    # ブラウザ終了
+    driver.quit
+    headless.destroy
+  end
 end
