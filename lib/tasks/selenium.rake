@@ -1,7 +1,7 @@
 namespace :selenium do
 
-  desc "全項目更新"
-  task all_update: :environment do
+  desc "特集 & 最新情報 更新"
+  task double_update: :environment do
     p "Waiting..."
     # ブラウザ起動
     headless = Headless.new
@@ -251,6 +251,7 @@ namespace :selenium do
           # 空席情報を更新
           driver.find_element(:id, 'a_seat3').click
           # ポップアップを処理
+          sleep 3
           alert = driver.switch_to.alert
           alert.accept
           p "vacancy successed!!!"
