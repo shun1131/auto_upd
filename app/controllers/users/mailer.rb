@@ -6,6 +6,7 @@ class Users::Mailer < Devise::Mailer
     # customize
     super
   end
+  "ggggggggggggggggggg"
 
   def reset_password_instructions(record, token, opts={})
     # customize
