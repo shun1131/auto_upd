@@ -7,8 +7,6 @@ class SchedulesController < ApplicationController
     @schedules = Schedule.all
   end
 
-  "mmmmmmmmmmmmmmmmm"
-
   def new
     @restaurant = Restaurant.find(params[:restaurant_id])
     @schedule   = Schedule.new
