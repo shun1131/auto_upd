@@ -53,6 +53,9 @@ gem 'selenium-webdriver'
 # Xvfbの立ち上げ
 gem 'headless'
 
+# cron 処理
+gem 'whenever'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
