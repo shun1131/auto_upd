@@ -5,6 +5,8 @@ class RecordController < ApplicationController
   def index
   end
 
+  "opooooooooopopopopopopop"
+
   private
   def set_ransack
     @q = Record.all.ransack(params[:q])
